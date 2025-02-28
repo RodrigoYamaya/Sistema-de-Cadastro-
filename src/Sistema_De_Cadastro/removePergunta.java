@@ -1,9 +1,11 @@
-    import java.io.*;
+package Sistema_De_Cadastro;
+
+import java.io.*;
     import java.util.ArrayList;
     import java.util.List;
     import java.util.Scanner;
 
-    public class RemovePergunta {
+    public class removePergunta {
         private static final File ARQUIVO = new File("Formulario.txt");
         private static final Scanner sc = new Scanner(System.in);
 
@@ -44,7 +46,7 @@
                 return;
             }
 
-            if (indicePergunta <= 4 || indicePergunta > perguntas.size()) {
+            if (indicePergunta < 5 || indicePergunta > perguntas.size()) {
                 System.out.println("Erro: Não é permitido apagar as 4 primeiras perguntas obrigatórias!");
                 return;
             }

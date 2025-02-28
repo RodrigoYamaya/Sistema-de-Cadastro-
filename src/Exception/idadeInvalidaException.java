@@ -1,7 +1,8 @@
 package Exception;
 
-public class IdadeInvalidaException extends RuntimeException {
-  public IdadeInvalidaException(String message) {
-    super(message);
-  }
+public class idadeInvalidaException extends Exception {
+    private static final long serialVersionUID = 1L;
+    public idadeInvalidaException(String message) {
+        super(message);
+    }
 }

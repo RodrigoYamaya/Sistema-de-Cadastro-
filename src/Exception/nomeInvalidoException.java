@@ -1,7 +1,8 @@
 package Exception;
 
-public class NomeInvalidoException extends RuntimeException {
-  public NomeInvalidoException(String message) {
-    super(message);
-  }
+public class nomeInvalidoException extends Exception {
+    private static final long serialVersionUID = 1L;
+    public nomeInvalidoException(String message) {
+        super(message);
+    }
 }

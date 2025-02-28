@@ -1,21 +1,20 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+package Sistema_De_Cadastro;
+
+
+import utilities.arquivo_leitura;
 
 public class adicionarPergunta {
-    private static final File ARQUIVO =  new File("Formulario.txt");
+    private static final String CAMINHO_ARQUIVO = ("Formulario.txt");
 
 
 
     public void adicionarPergunta(String novaPergunta) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO, true))) {
-            bw.write(novaPergunta + "\n");
-            bw.flush();
-            System.out.println("Pergunta adicionada com sucesso!");
-        } catch (IOException e) {
-            System.out.println("error: pergunta nao foi adicionado!");
-        }
+      if(novaPergunta == null || novaPergunta.trim().isEmpty()) {
+          System.out.println("Erro: A pergunta não pode ser vazia!");
+          return;
+      }
+
+      arquivo_leitura.adicionarLinhaArquivo(CAMINHO_ARQUIVO, novaPergunta);
 
     }
 }
